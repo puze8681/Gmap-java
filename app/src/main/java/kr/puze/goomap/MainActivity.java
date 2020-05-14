@@ -80,7 +80,7 @@ public final class MainActivity extends AppCompatActivity implements OnMapReadyC
         mDatabase.addValueEventListener(valueEventListener);
     }
 
-    private void setPin(String path, final String number, final String title, final double lat, final double lng) {
+    private void setPin(String path, final String title, final String number, final double lat, final double lng) {
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://silmu-7526a.appspot.com");
         StorageReference storageRef = storage.getReference().child("map");
         StorageReference pathReference = storageRef.child(path);
